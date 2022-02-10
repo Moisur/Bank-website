@@ -21,17 +21,18 @@ document.getElementById('withdraw-button').addEventListener ("click", function()
    const withdrawamount = withdrawinput.value;
    const withdrawamountNumber = parseFloat(withdrawamount);
 // witgdeoammount  pat
-const withdrawamounttotal = document.getElementById("witgdeoammount");
-const withdrawamounttotalText = withdrawamounttotal.innerText;
-const withdrawamounttotalNumber = parseFloat(withdrawamounttotalText);
-withdrawamounttotal.innerText = withdrawamountNumber+withdrawamounttotalNumber;
-withdrawinput.value ='';
+    const withdrawamounttotal = document.getElementById("witgdeoammount");
+    const withdrawamounttotalText = withdrawamounttotal.innerText;
+    const withdrawamounttotalNumber = parseFloat(withdrawamounttotalText);
+    const totalwrideiryi =withdrawamountNumber+withdrawamounttotalNumber;
+    withdrawamounttotal.innerText = totalwrideiryi
    
-//    if(withdrawamount == "" ||typeof withdrawamount == "toString" ){
-//        alert("Any Number")
-//    }
-//    else{
-//        console.log(withdrawamount)
-//    }
+ // update account balance 
+    const updatebalanceadd = document.getElementById("updatebalence");
+    const updatebalanceaddtext = updatebalanceadd.innerText;
+     const updatebalanceaddnumber = parseFloat(updatebalanceaddtext);
+    updatebalanceadd.innerText = updatebalanceaddnumber-totalwrideiryi;
+    withdrawinput.value ='';
+   
 
 });
